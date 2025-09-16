@@ -1,72 +1,70 @@
-##EuroSAT-ML-CNN
+# EuroSAT-ML-CNN
 
 Classification of EuroSAT RGB satellite images using Classical ML, Ensemble Methods, and CNNs.
 
-##📌 Overview
+---
+
+## 📌 Overview
 
 This project provides a complete workflow for EuroSAT RGB dataset classification, including:
 
-Data preprocessing and visualization
+- Data preprocessing and visualization  
+- Feature extraction for classical ML  
+- Training, hyperparameter tuning, and evaluation of models  
+- Ensemble learning with soft voting and SMOTE  
+- Convolutional Neural Network (CNN) implementation  
+- Performance comparison across all models  
 
-Feature extraction for classical ML
-
-Training, hyperparameter tuning, and evaluation of models
-
-Ensemble learning with soft voting and SMOTE
-
-Convolutional Neural Network (CNN) implementation
-
-Performance comparison across all models
+---
 
 ## 📂 Dataset
+
 **EuroSAT RGB dataset**: 27,000 labeled satellite images (64×64) across 10 classes:  
 
 - AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake  
-- Dataset URL: [EuroSAT GitHub](https://github.com/phelber/EuroSAT)
+- Dataset URL: [EuroSAT GitHub](https://github.com/phelber/EuroSAT)  
 
-##⚙️ Setup
+---
+
+## ⚙️ Setup
 
 Install required packages:
 
+```bash
 pip install tensorflow scikit-learn opencv-python matplotlib scikit-image imbalanced-learn seaborn pandas
 
-##🔹 Methods & Models
 
-**1. Classical ML Models**
+```
 
-Logistic Regression, SVM, KNN
 
-Feature extraction: grayscale stats, histogram, edge detection
-Hyperparameter tuning via GridSearchCV
+## 🔹 Methods & Models
 
-****2. Voting Ensembles****
+### 1️⃣ Classical ML Models
+- Logistic Regression, SVM, KNN  
+- Feature extraction: grayscale stats, histogram, edge detection  
+- Hyperparameter tuning via GridSearchCV  
 
-Soft voting ensemble of Logistic Regression, SVM, and KNN
+### 2️⃣ Voting Ensembles
+- Soft voting ensemble of Logistic Regression, SVM, and KNN  
+- Optional SMOTE resampling for class imbalance  
 
-Optional SMOTE resampling for class imbalance
+### 3️⃣ Convolutional Neural Network (CNN)
+- Sequential CNN with Conv2D, MaxPooling, Dense, Dropout  
+- Trained on normalized RGB images  
+- One-hot encoded labels for 10 classes  
 
-**3. Convolutional Neural Network (CNN)**
+---
 
-Sequential CNN with Conv2D, MaxPooling, Dense, Dropout
+## 📊 Results
+- Classical ML: Accuracy ~0.48–0.63  
+- Voting Ensemble: Slight improvement over individual models  
+- CNN: Highest test accuracy on RGB images  
+- Summary table and bar plot compare all models  
 
-Trained on normalized RGB images
+---
 
-One-hot encoded labels for 10 classes
+## 📈 Visualizations
+- Confusion matrices for all models  
+- Accuracy comparison bar plot  
+- Preprocessing and feature extraction visuals (grayscale, edges, histograms)  
 
-##📊 Results
-
-Classical ML: Accuracy ~0.48–0.63
-
-Voting Ensemble: Slight improvement over individual models
-
-CNN: Highest test accuracy on RGB images
-
-Summary table and bar plot compare all models
-
-##📈 Visualizations
-
-Confusion matrices for all models
-
-Accuracy comparison bar plot
-
-Preprocessing and feature extraction visuals (grayscale, edges, histograms)
