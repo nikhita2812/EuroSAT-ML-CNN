@@ -26,15 +26,6 @@ AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, Permanen
 
 Dataset URL: EuroSAT GitHub
 
-**🛠 Project Structure**
-.
-├── data/               # Dataset (if stored locally)
-├── notebooks/          # Jupyter notebooks for experiments
-├── src/                # Scripts for preprocessing, feature extraction, and training
-├── models/             # Saved trained models (optional)
-├── README.md           # Project documentation
-└── requirements.txt    # Required Python packages
-
 **⚙️ Setup**
 
 Install required packages:
