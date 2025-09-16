@@ -1,4 +1,5 @@
-**EuroSAT-ML-CNN****
+**EuroSAT-ML-CNN**
+
 Classification of EuroSAT RGB satellite images using Classical ML, Ensemble Methods, and CNNs.
 
 **📌 Overview**
