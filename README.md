@@ -18,13 +18,11 @@ Convolutional Neural Network (CNN) implementation
 
 Performance comparison across all models
 
-**📂 Dataset**
+## 📂 Dataset
+**EuroSAT RGB dataset**: 27,000 labeled satellite images (64×64) across 10 classes:  
 
-EuroSAT RGB dataset: 27,000 labeled satellite images (64×64) across 10 classes:
-
-AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake
-
-Dataset URL: EuroSAT GitHub
+- AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake  
+- Dataset URL: [EuroSAT GitHub](https://github.com/phelber/EuroSAT)
 
 **⚙️ Setup**
 
