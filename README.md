@@ -55,8 +55,8 @@ Trained on normalized RGB images
 
 One-hot encoded labels for 10 classes
 
-**📊 Results
-**
+**📊 Results**
+
 Classical ML: Accuracy ~0.48–0.63
 
 Voting Ensemble: Slight improvement over individual models
