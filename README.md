@@ -1,108 +1,82 @@
-EuroSAT-ML-CNN
+**EuroSAT-ML-CNN****
+Classification of EuroSAT RGB satellite images using Classical ML, Ensemble Methods, and CNNs.
 
-Classification of EuroSAT RGB satellite images using classical ML models, ensemble methods, and CNNs.
+**📌 Overview**
 
-Table of Contents
+This project provides a complete workflow for EuroSAT RGB dataset classification, including:
 
-Overview
+Data preprocessing and visualization
 
-Dataset
+Feature extraction for classical ML
 
-Project Structure
+Training, hyperparameter tuning, and evaluation of models
 
-Setup
+Ensemble learning with soft voting and SMOTE
 
-Models & Methods
+Convolutional Neural Network (CNN) implementation
 
-Results
+Performance comparison across all models
 
-Visualization
+**📂 Dataset**
 
-License
+EuroSAT RGB dataset: 27,000 labeled satellite images (64×64) across 10 classes:
 
-Overview
+AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake
 
-This repository provides a complete workflow for classifying the EuroSAT RGB dataset using:
+Dataset URL: EuroSAT GitHub
 
-Classical ML models (Logistic Regression, SVM, KNN)
-
-Voting Ensembles (with and without SMOTE)
-
-Convolutional Neural Networks (CNN)
-
-It includes data preprocessing, feature extraction, model training, hyperparameter tuning, evaluation, and comparison.
-
-Dataset
-
-The EuroSAT RGB dataset consists of 27,000 labeled satellite images across 10 classes.
-
-RGB images (64×64)
-
-Classes include: AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake
-
-Source: EuroSAT GitHub
-
-Project Structure
+**🛠 Project Structure**
 .
-├── data/               # Dataset (if downloaded locally)
+├── data/               # Dataset (if stored locally)
 ├── notebooks/          # Jupyter notebooks for experiments
 ├── src/                # Scripts for preprocessing, feature extraction, and training
-├── models/             # Saved models (optional)
-├── README.md
-└── requirements.txt
+├── models/             # Saved trained models (optional)
+├── README.md           # Project documentation
+└── requirements.txt    # Required Python packages
 
-Setup
+**⚙️ Setup**
 
-Install the required packages:
+Install required packages:
 
 pip install tensorflow scikit-learn opencv-python matplotlib scikit-image imbalanced-learn seaborn pandas
 
+**🔹 Methods & Models**
 
-Optional (if using Google Colab):
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-Models & Methods
-
-Classical ML Models
+**1. Classical ML Models**
 
 Logistic Regression, SVM, KNN
 
-Feature extraction: grayscale stats, edge detection, histograms
+Feature extraction: grayscale stats, histogram, edge detection
+Hyperparameter tuning via GridSearchCV
 
-Hyperparameter tuning with GridSearchCV
+****2. Voting Ensembles****
 
-Voting Ensembles
+Soft voting ensemble of Logistic Regression, SVM, and KNN
 
-Soft voting ensemble of the three classical models
+Optional SMOTE resampling for class imbalance
 
-Handling class imbalance with SMOTE
+**3. Convolutional Neural Network (CNN)**
 
-CNN
-
-Sequential CNN with Conv2D, MaxPooling, Dense, and Dropout layers
+Sequential CNN with Conv2D, MaxPooling, Dense, Dropout
 
 Trained on normalized RGB images
 
-Results
+One-hot encoded labels for 10 classes
 
-Classical ML models achieve accuracies around 0.48–0.63
+**📊 Results
+**
+Classical ML: Accuracy ~0.48–0.63
 
-Voting ensemble improves performance slightly
+Voting Ensemble: Slight improvement over individual models
 
-CNN provides higher accuracy on RGB images
+CNN: Highest test accuracy on RGB images
 
-Final performance comparison is summarized in a table and bar plot
+Summary table and bar plot compare all models
 
-Visualization
+**📈 Visualizations**
 
 Confusion matrices for all models
 
 Accuracy comparison bar plot
 
-Preprocessing and feature extraction visualizations (grayscale, edges, histograms)
-
-License
-
-This project is open-source. You can freely use and modify it for educational or research purposes.
+Preprocessing and feature extraction visuals (grayscale, edges, histograms)
