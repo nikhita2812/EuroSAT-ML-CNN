@@ -1,8 +1,8 @@
-**EuroSAT-ML-CNN**
+##EuroSAT-ML-CNN
 
 Classification of EuroSAT RGB satellite images using Classical ML, Ensemble Methods, and CNNs.
 
-**📌 Overview**
+##📌 Overview
 
 This project provides a complete workflow for EuroSAT RGB dataset classification, including:
 
@@ -24,13 +24,13 @@ Performance comparison across all models
 - AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake  
 - Dataset URL: [EuroSAT GitHub](https://github.com/phelber/EuroSAT)
 
-**⚙️ Setup**
+##⚙️ Setup
 
 Install required packages:
 
 pip install tensorflow scikit-learn opencv-python matplotlib scikit-image imbalanced-learn seaborn pandas
 
-**🔹 Methods & Models**
+##🔹 Methods & Models
 
 **1. Classical ML Models**
 
@@ -53,7 +53,7 @@ Trained on normalized RGB images
 
 One-hot encoded labels for 10 classes
 
-**📊 Results**
+##📊 Results
 
 Classical ML: Accuracy ~0.48–0.63
 
@@ -63,7 +63,7 @@ CNN: Highest test accuracy on RGB images
 
 Summary table and bar plot compare all models
 
-**📈 Visualizations**
+##📈 Visualizations
 
 Confusion matrices for all models
 
